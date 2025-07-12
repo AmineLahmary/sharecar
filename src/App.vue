@@ -5,7 +5,7 @@ import Header from "./components/Header.vue";
 
 <template>
   <div class="app-container">
-    <Header />
+    <Header ></Header>
     <Hero />
   </div>
 </template>
