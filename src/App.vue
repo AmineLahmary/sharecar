@@ -1,12 +1,23 @@
 <script setup lang="ts">
+import Hero from "./components/Hero.vue";
+import Header from "./components/Header.vue";
 </script>
 
 <template>
   <div class="app-container">
-    <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-    <h1>ShareCar</h1>
-    <p>Comming soon...</p>
+    <Header />
+    <Hero />
   </div>
 </template>
+
+<style scoped>
+.app-container {
+  position: relative;
+  min-height: 1000vh;
+  overflow: hidden;
+  padding: 10px;
+}
+</style>
+
 
 

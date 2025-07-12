@@ -6,35 +6,14 @@
   font-family: "Raleway", sans-serif;
 }
 
-.app-container {
+#app {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
+}
 
-  * {
-    position: relative;
-    color: #fff;
-  }
-
-  img {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  h1 {
-    font-size: 90px;
-    font-family: "Kaushan Script", cursive;
-    font-weight: 700;
-
-    box-shadow: 0 0 0 1000px rgb(0 0 0 / 60%),
-      inset 0 0 0 1000px rgb(0 0 0 / 60%);
-  }
-  p {
-    font-size: 30px;
-  }
+.container {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
 }
