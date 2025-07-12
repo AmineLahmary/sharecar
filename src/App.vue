@@ -13,7 +13,7 @@ import Header from "./components/Header.vue";
 <style scoped>
 .app-container {
   position: relative;
-  min-height: 1000vh;
+  min-height: 100vh;
   overflow: hidden;
   padding: 10px;
 }
