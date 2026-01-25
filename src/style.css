@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
 
-* {
-  padding: 0;
-  margin: 0;
-  font-family: "Raleway", sans-serif;
+
+
+
+@theme {
+
+  --primary-color: hsl(150, 91%, 21%);
+
+
+
 }
-
 #app {
   position: relative;
   min-height: 100vh;
@@ -16,4 +21,38 @@
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
+}
+
+section {
+  padding-inline: 20px;
+}
+
+
+@layer components {
+  .primary-btn {
+    background-color: var(--color-stone-800);
+    color: var(--color-white);
+    padding: var(--spacing) calc(var(--spacing) * 3);
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .primary-btn:hover {
+    background-color: var(--color-stone-950);
+    box-shadow: var(--shadow-sm);
+  }
+  .secondary-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing);
+    background-color: transparent;
+    padding: var(--spacing) calc(var(--spacing) * 3);
+    border-radius: var(--radius-md);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .secondary-btn:hover {
+    background-color: var(--color-stone-100);
+    box-shadow: var(--shadow-sm);
+  }
 }

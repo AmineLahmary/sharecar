@@ -1,21 +1,30 @@
 <script setup lang="ts">
-import Hero from "./components/Hero.vue";
-import Header from "./components/Header.vue";
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
+import AdminLayout from "@/layouts/AdminLayout.vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute()
+
+
+
+
 </script>
 
 <template>
-  <div class="app-container">
-    <Header ></Header>
-    <Hero />
-  </div>
+  <UApp class="app-container">
+    <DefaultLayout v-if="route.meta.layout !== 'AdminLayout'">
+        <RouterView />
+    </DefaultLayout>
+    <AdminLayout v-else>
+        <RouterView />
+    </AdminLayout>
+  </UApp>
 </template>
 
 <style scoped>
 .app-container {
   position: relative;
   min-height: 100vh;
-  overflow: hidden;
-  padding: 10px;
 }
 </style>
 
