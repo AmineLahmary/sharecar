@@ -21,7 +21,7 @@
           </div>
           <div v-else class="text-lg font-semibold">Personal information</div>
           <button @click="emit('close')" class="secondary-btn rounded-full aspect-square p-1">
-            <X size="18" />
+            <X :size=18 />
           </button>
         </div>
         <div v-if="!lastStep">
